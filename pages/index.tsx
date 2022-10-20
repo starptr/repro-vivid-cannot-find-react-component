@@ -1,29 +1,16 @@
-import { Features } from "../components/Features";
-import { FeaturesBlocks } from "../components/FeaturesBlocks";
-import { Footer } from "../components/Footer";
-import { Header } from "../components/Header";
-import { HeroHome } from "../components/HeroHome";
-import { Newsletter } from "../components/Newsletter";
-import { Testimonials } from "../components/Testimonials";
+import Head from "next/head";
 
-const Home = ({ isDarkMode, toggle }) => {
+export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen overflow-hidden">
-      {/*  Site header */}
-      <Header isDarkMode={isDarkMode} toggle={toggle} />
-      {/*  Page content */}
-      <main className="flex-grow">
-        {/*  Page sections */}
-        <HeroHome />
-        <Features />
-        <FeaturesBlocks />
-        <Testimonials />
-        <Newsletter />
-      </main>
-      {/*  Site footer */}
-      <Footer />
-    </div>
+    <>
+      <div className="container mx-auto max-w-4xl break-normal pt-16 text-center md:pt-32">
+        <p className="text-3xl font-extrabold text-white md:text-5xl">
+          Ghostwind CSS
+        </p>
+        <p className="text-xl text-gray-500 md:text-2xl">
+          Tailwind has been added!!! yay! yay!
+        </p>
+      </div>
+    </>
   );
-};
-
-export default Home;
+}
